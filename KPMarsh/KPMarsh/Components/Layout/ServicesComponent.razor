@@ -1,0 +1,32 @@
+﻿@* Services Section *@
+<section class="services" id="services">
+    <h1 class="heading"> Vores Tjenester</h1>
+    <div class="box-container">
+        @for (int i = 1; i < services.Count+1; i++)
+        {
+            <div class="box">
+                @* TODO *@
+                <img src="/Images/service_@(i).png" alt="" />
+                <h3>@services[i-1]</h3>
+                <p>Dette indkludere @ServiceElements[i-1]</p>
+            </div>
+        }
+    </div>
+</section>
+@code {
+    private List<string> services = new List<string>()
+    {
+        "Udgravninger",
+        "Kloakering",
+        "Byggeri",
+        "Belægninger"
+    };
+    private List<string> ServiceElements = new List<string>()
+    {
+       "Byggemodning, Vejkasser, Byggegrunde, Fundamenter og Søer",
+       "Nyanlæg, Renovering, Nedsivningsanlæg, Seperation og Fedt / Olie udskillere",
+       "Fundamenter, Terrængulve, Støttemure, Nybyggeri og Renovering",
+       "Indkørsler, Terraser, Fortove, Pladser og Asfaltering"
+    };
+}
+}

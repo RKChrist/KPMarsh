@@ -1,0 +1,15 @@
+﻿.logo-container {
+  text-align: center;
+}
+.logo-container h3 {
+  font-size: 3rem;
+  color: var(--black);
+  text-transform: capitalize;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.logo-container img {
+  height: 10rem;
+  pointer-events: none;
+  user-select: none;
+}

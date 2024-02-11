@@ -1,0 +1,38 @@
+﻿[
+  {
+    "outputFile": "wwwroot/app.css",
+    "inputFile": "wwwroot/app.scss"
+  },
+  {
+    "outputFile": "Components/Layout/NavMenu.razor.css",
+    "inputFile": "Components/Layout/NavMenu.razor.scss"
+  },
+  {
+    "outputFile": "Components/Layout/ContactInfo.razor.css",
+    "inputFile": "Components/Layout/ContactInfo.razor.scss"
+  },
+  {
+    "outputFile": "Components/Pages/Home.razor.css",
+    "inputFile": "Components/Pages/Home.razor.scss"
+  },
+  {
+    "outputFile": "Components/Layout/AboutComponent.razor.css",
+    "inputFile": "Components/Layout/AboutComponent.razor.scss"
+  },
+  {
+    "outputFile": "Components/Layout/ServicesComponent.razor.css",
+    "inputFile": "Components/Layout/ServicesComponent.razor.scss"
+  },
+  {
+    "outputFile": "Components/Layout/ClientsComponent.razor.css",
+    "inputFile": "Components/Layout/ClientsComponent.razor.scss"
+  },
+  {
+    "outputFile": "Components/Layout/FooterComponent.razor.css",
+    "inputFile": "Components/Layout/FooterComponent.razor.scss"
+  },
+  {
+    "outputFile": "Components/Layout/Contact.razor.css",
+    "inputFile": "Components/Layout/Contact.razor.scss"
+  }
+]

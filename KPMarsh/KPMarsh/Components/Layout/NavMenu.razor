@@ -1,0 +1,59 @@
+﻿@inject NavigationManager Navigation
+@using System.Globalization
+@rendermode InteractiveServer
+<header class="header">
+   @*  <img src="Logo.png" class="Logo"/> *@
+    <div class="logo">
+        <NavLink class="nav-menu" href="" Match="NavLinkMatch.All">
+            <img class="nav-logo" src="/Images/LogoSort.png" />
+        </NavLink>
+    </div>
+    <nav class="navbar@(onPressedMenu ? " active" : "")">
+        <NavLink class="nav-menu" href="#about">
+           <span aria-hidden="true"></span> Om Os
+       </NavLink>
+        <NavLink class="nav-menu" href="#services">
+           <span aria-hidden="true"></span> Projecter
+       </NavLink>
+        @* <NavLink class="nav-menu" href="#contact">
+            <span aria-hidden="true"></span> Referencer
+        </NavLink> *@
+        <NavLink class="nav-menu" href="#contact">
+           <span aria-hidden="true"></span> Kontakt
+       </NavLink>
+    </nav>
+    <!-- Icons -->
+    <div class="icons">
+        <div id="menu-btn" @onclick=@(() => PressedMenu())  class="fas fa-bars"></div>
+        <div id="info-btn" @onclick=@(() => PressedInfo()) class="fas fa-question-circle"></div>
+    </div>
+
+
+    
+</header>
+@if (onPressedInfo)
+{
+    <CascadingValue Value="this">
+        <ContactInfo></ContactInfo>
+    </CascadingValue>
+}
+@code{
+    public bool onPressedMenu = false;
+    public bool onPressedInfo = false;
+
+    public void PressedMenu(){
+        onPressedInfo = false;
+        onPressedMenu = onPressedMenu ? false : true;
+        StateHasChanged();
+    }
+    public void Update()
+    {
+        this.StateHasChanged();
+    }
+    public void PressedInfo()
+    {
+        onPressedMenu = false;
+        onPressedInfo = onPressedInfo ? false : true;
+        StateHasChanged();
+    }
+}

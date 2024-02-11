@@ -1,0 +1,82 @@
+﻿@mixin iconsBox() {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    background: var(--light-bg);
+    color: var(--black);
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+        background: var(--black);
+        color: var(--white);
+    }
+}
+
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 2rem;
+}
+
+@mixin titleText($titleSize) {
+    font-size: $titleSize;
+    color: var(--black);
+    text-transform: capitalize;
+}
+
+@mixin graphText($graphSize) {
+    font-size: $graphSize;
+    color: var(--light-color);
+    line-height: 2;
+}
+
+section {
+    padding: 5rem 10%;
+}
+
+.heading {
+    margin-bottom: 3rem;
+    padding-left: 1rem;
+    border-left: 1rem solid var(--yellow);
+    @include titleText(3rem);
+}
+
+
+.services {
+    background: var(--light-bg);
+
+    .box-container {
+        @include grid(25rem);
+        align-content: flex-end;
+
+        .box {
+            text-align: center;
+            background: var(--white);
+            box-shadow: var(--box-shadow);
+            border: var(--border);
+            padding: 3rem;
+        }
+
+        &:hover img {
+            transform: translateY(-1rem);
+        }
+
+        img {
+            height: 7rem;
+            margin-bottom: .5rem;
+            transition: .2s linear;
+        }
+
+        h3 {
+            @include titleText(2rem);
+            padding: 1rem 0;
+        }
+
+        p {
+            @include graphText(1.5rem);
+            padding-top: .5rem;
+        }
+    }
+}

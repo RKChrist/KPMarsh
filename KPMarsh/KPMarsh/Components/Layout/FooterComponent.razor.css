@@ -1,0 +1,12 @@
+﻿.footer {
+  text-align: center;
+}
+.footer .links .nav-menu {
+  margin: 0.5rem;
+}
+.footer .credit {
+  font-size: 2rem;
+  color: var(--black);
+  text-transform: capitalize;
+  margin-top: 2rem;
+}

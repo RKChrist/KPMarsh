@@ -1,0 +1,42 @@
+﻿
+<div class="contact-info active">
+    <div id="close-contact-info" onclick="@(() => CloseContactInfo())" class="fas fa-times"></div>
+    <div class="info">
+        <img src="Images/torben.png"/>
+        <h3>Indehaver</h3>
+        <p>@chef</p>
+    </div>
+    <div class="info">
+        <i class="fas fa-phone"></i>
+        <h3>Kontakt tlf</h3>
+        <p>(+45) @chefTlf</p>
+    </div>
+
+    <div class="info">
+        <i class="fas fa-envelope"></i>
+        <h3>EmailAdress</h3>
+        <p>@chefEmail</p>
+    </div>
+    <div class="info">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Firma Adresse</h3>
+        <p>@firmAdress</p>
+    </div>
+    <div class="share">
+        <a href="https://www.facebook.com/942344795790738?ref=embed_page" class="fab fa-facebook-f"></a>
+    </div>
+</div>
+@code {
+    [CascadingParameter]
+    public NavMenu _Parent { get; set; }
+
+    public void CloseContactInfo()
+    {
+        _Parent.onPressedInfo = false;
+        _Parent.Update();
+    }
+    string chef = "Torben Marsh";
+    string chefTlf = "40 27 13 87";
+    string chefEmail = "torbenmarsh@gmail.com";
+    string firmAdress = "Bjerrevej 352 - 8783 Hornsyld";
+}

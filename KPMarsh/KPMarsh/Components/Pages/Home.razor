@@ -1,0 +1,75 @@
+﻿@page "/"
+@using System.Globalization;
+@inject IStringLocalizer<ApplicationRessource> localizer
+@inject IJSRuntime JsRuntime;
+
+<section class="home" id="home">
+    <div class="home-slider swiper">
+        <div class="w swiper-wrapper">
+            <section class="swiper-slide slide" style="background: url(/Images/Slide1.png) no-repeat; height: 100%;">
+                <div class="content">
+                    <h3>Producerer et færdigt resultat, som lever 100 % op til dine forventninger</h3>
+                    @* An option *@
+                    @* <p>@localizer["Firm"]</p> *@
+                    <NavLink class="btn" href="#home">
+                        <span aria-hidden="true"></span> Tidligere projekter
+                    </NavLink>
+                </div>
+            </section>
+            <section class="swiper-slide slide" style="background: url(/Images/Slide2.png) no-repeat; height: 100%;">
+                <div class="content">
+                    <h3>Producerer et færdigt resultat, som lever 100 % op til dine forventninger</h3>
+                    @* An option *@
+                    @* <p>@localizer["Firm"]</p> *@
+                    <NavLink class="btn" href="#About">
+                        <span aria-hidden="true"></span> Tidligere projekter
+                    </NavLink>
+                </div>
+            </section>
+
+            <section class="swiper-slide slide" style="background: url(/Images/Slide3.png) no-repeat; height: 100%;">
+                <div class="content">
+                    <h3>Producerer et færdigt resultat, som lever 100 % op til dine forventninger</h3>
+                    @* An option *@
+                    @* <p>@localizer["Firm"]</p> *@
+                    <NavLink class="btn" href="#About">
+                        <span aria-hidden="true"></span> Tidligere projekter
+                    </NavLink>
+                </div>
+            </section>
+
+            <section class="swiper-slide slide" style="background: url(/Images/Slide4.png) no-repeat; height: 100%;">
+                <div class="content">
+                    <h3>Producerer et færdigt resultat, som lever 100 % op til dine forventninger</h3>
+                    @* An option *@
+                    @* <p>@localizer["Firm"]</p> *@
+                    <NavLink class="btn" href="#About">
+                        <span aria-hidden="true"></span> Tidligere projekter
+                    </NavLink>
+                </div>
+            </section>
+           
+        </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+    </div>
+</section>
+<KPMarsh.Components.Layout.AboutComponent></KPMarsh.Components.Layout.AboutComponent>
+<KPMarsh.Components.Layout.ServicesComponent></KPMarsh.Components.Layout.ServicesComponent>
+<KPMarsh.Components.Layout.Contact></KPMarsh.Components.Layout.Contact>
+<KPMarsh.Components.Layout.ClientsComponent></KPMarsh.Components.Layout.ClientsComponent>
+@code {
+    List<string> Images = new List<string>();
+
+    protected override Task OnInitializedAsync()
+    {
+        Images = new List<string>() { "Gravko.jpg", "VolvoGrave.png", "Working.jpg", "Medarbejdere.jpg" };
+        return base.OnInitializedAsync();
+    }
+
+    // protected async override Task OnAfterRenderAsync(bool firstRender)
+    // {
+    //     await JsRuntime.InvokeVoidAsync("initSwiper", null);
+    // }
+
+}

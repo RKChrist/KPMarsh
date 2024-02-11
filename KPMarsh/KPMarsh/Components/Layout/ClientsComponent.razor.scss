@@ -1,0 +1,51 @@
+
+
+@mixin iconsBox() {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    background: var(--light-bg);
+    color: var(--black);
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+        background: var(--black);
+        color: var(--white);
+    }
+}
+
+@mixin grid($val) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax($val, 1fr));
+    gap: 2rem;
+}
+
+@mixin titleText($titleSize) {
+    font-size: $titleSize;
+    color: var(--black);
+    text-transform: capitalize;
+}
+
+@mixin graphText($graphSize) {
+    font-size: $graphSize;
+    color: var(--light-color);
+    line-height: 2;
+}
+
+.logo-container {
+    text-align: center;
+
+    h3 {
+        @include titleText(3rem);
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    img {
+        height: 10rem;
+        pointer-events: none;
+        user-select: none;
+    }
+}
