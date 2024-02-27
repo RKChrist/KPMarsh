@@ -2,6 +2,7 @@
 @using System.Globalization;
 @inject IStringLocalizer<ApplicationRessource> localizer
 @inject IJSRuntime JsRuntime;
+@using KPMarsh.Components.Layout;
 
 <section class="home" id="home">
     <div class="home-slider swiper">
@@ -54,18 +55,11 @@
             <div class="swiper-button-prev"></div>
     </div>
 </section>
-<KPMarsh.Components.Layout.AboutComponent></KPMarsh.Components.Layout.AboutComponent>
-<KPMarsh.Components.Layout.ServicesComponent></KPMarsh.Components.Layout.ServicesComponent>
-<KPMarsh.Components.Layout.Contact></KPMarsh.Components.Layout.Contact>
-<KPMarsh.Components.Layout.ClientsComponent></KPMarsh.Components.Layout.ClientsComponent>
+<AboutComponent></AboutComponent>
+<ServicesComponent></ServicesComponent>
+<Contact></Contact>
+<ClientsComponent></ClientsComponent>
 @code {
-    List<string> Images = new List<string>();
-
-    protected override Task OnInitializedAsync()
-    {
-        Images = new List<string>() { "Gravko.jpg", "VolvoGrave.png", "Working.jpg", "Medarbejdere.jpg" };
-        return base.OnInitializedAsync();
-    }
 
     // protected async override Task OnAfterRenderAsync(bool firstRender)
     // {
